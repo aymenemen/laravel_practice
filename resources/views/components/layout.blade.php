@@ -13,6 +13,11 @@
 
     </head>
     <body class="antialiased">
-       {{ $slot }}
+       @session('message')
+        <div class="success-message">
+            {{ session('message') }}
+        </div>
+       @endsession
+        {{ $slot }}
     </body>
 </html>
